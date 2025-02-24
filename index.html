@@ -136,47 +136,10 @@
     width: 100%;
        }
 
-       @media print {
-            body * {
-                visibility: hidden; /* Hide everything by default */
-            }
-            #document-content, #document-content * {
-                visibility: visible; /* Show only the LOA content */
-            }
-            #document-content {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-            }
-            #print-button {
-                display: none; /* Hide the print button when printing */
-            }
-        }
-
     </style>
-    
-    <script>
-        function printDocument() {
-            let printContents = document.getElementById("document-content").innerHTML;
-            let originalContents = document.body.innerHTML;
-
-            document.body.innerHTML = printContents;  // Show only the document
-            window.print();  // Open print dialog
-            document.body.innerHTML = originalContents;  // Restore the original page after printing
-        }
-    </script>
 </head>
 
 <body>
-    <button onclick="printDocument()" id="print-button" style="background-color: #1E3A8A; color: white; padding: 10px 15px; border-radius: 5px; border: none; font-size: 14px; cursor: pointer;">
-    Print / Save as PDF
-</button>
-
-
-    <div id="document-content">
-    <!-- All your existing content goes inside this div -->
-
     <div class="header">Letter of Appointment</div>
 
     <div class="content">
@@ -189,7 +152,7 @@
 
     <p>And</p></center>
 <br>
-    <p><strong>Full Name:</strong> Ira</p>
+    <p><strong>Full Name:</strong> Maxine</p>
     <p><strong>ID Number:</strong> 7001011234087</p>
     <p><strong>Physical Address:</strong><br>_____________________________________</p>
     <p><strong>Mobile:</strong> 0845551234</p>
@@ -415,10 +378,7 @@ Sales target achievement will be assessed based on the aggregate of invoiced sal
     </div>
 
     <div class="footer">
-        File Name: 250224 LOA Ira 250224193541
+        File Name: 250224 LOA Maxine 250224223328
     </div>
-    </div>
-    
-
 </body>
 </html>
