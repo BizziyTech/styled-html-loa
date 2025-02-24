@@ -155,6 +155,17 @@
         }
 
     </style>
+    
+    <script>
+        function printDocument() {
+            let printContents = document.getElementById("document-content").innerHTML;
+            let originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;  // Show only the document
+            window.print();  // Open print dialog
+            document.body.innerHTML = originalContents;  // Restore the original page after printing
+        }
+    </script>
 </head>
 
 <body>
@@ -406,17 +417,7 @@ Sales target achievement will be assessed based on the aggregate of invoiced sal
         File Name: 250224 LOA Ira 250224193541
     </div>
     </div>
-
-        <script>
-        function printDocument() {
-            let printContents = document.getElementById("document-content").innerHTML;
-            let originalContents = document.body.innerHTML;
-
-            document.body.innerHTML = printContents;  // Show only the document
-            window.print();  // Open print dialog
-            document.body.innerHTML = originalContents;  // Restore the original page after printing
-        }
-    </script>
+    
 
 </body>
 </html>
